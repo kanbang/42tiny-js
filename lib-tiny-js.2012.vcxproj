@@ -72,6 +72,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="helper\TinyJS_Helper.cpp" />
     <ClCompile Include="pool_allocator.cpp" />
     <ClCompile Include="TinyJS.cpp" />
     <ClCompile Include="TinyJS_Functions.cpp" />
@@ -81,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />
+    <ClInclude Include="Helper\Functor.h" />
+    <ClInclude Include="Helper\FuncTraits.h" />
+    <ClInclude Include="helper\TinyJS_Helper.h" />
+    <ClInclude Include="Helper\TypeList.h" />
+    <ClInclude Include="Helper\TypeManip.h" />
+    <ClInclude Include="Helper\TypeTraits.h" />
     <ClInclude Include="pool_allocator.h" />
     <ClInclude Include="time_logger.h" />
     <ClInclude Include="TinyJS.h" />
