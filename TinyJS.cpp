@@ -1,4 +1,4 @@
-/*
+๏ปฟ/*
  * TinyJS
  *
  * A single-file Javascript-alike engine
@@ -1142,8 +1142,8 @@ void CScriptTokenizer::tokenizeCode(CScriptLex &Lexer) {
 		tokenScopeStack.clear();
 		ScriptTokenState state;
 		pushForwarder(state);
-		if(l->tk == 'ง') { // special-Token at Start means the code begins not at Statement-Level
-			l->match('ง');
+		if(l->tk == 'ยง') { // special-Token at Start means the code begins not at Statement-Level
+			l->match('ยง');
 			tokenizeLiteral(state, 0);
 		} else do {
 			tokenizeStatement(state, 0);
@@ -6703,8 +6703,8 @@ void CTinyJS::native_parseFloat(const CFunctionsScopePtr &c, void *) {
 
 
 void CTinyJS::native_JSON_parse(const CFunctionsScopePtr &c, void *data) {
-	string Code = "ง" + c->getArgument("text")->toString();
-	// "ง" is a spezal-token - it's for the tokenizer and means the code begins not in Statement-level
+	string Code = "ยง" + c->getArgument("text")->toString();
+	// "ยง" is a spezal-token - it's for the tokenizer and means the code begins not in Statement-level
 	CScriptVarLinkWorkPtr returnVar;
 	CScriptTokenizer *oldTokenizer = t; t=0;
 	try {

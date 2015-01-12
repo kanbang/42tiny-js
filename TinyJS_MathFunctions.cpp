@@ -61,7 +61,9 @@ using namespace std;
 #define F_SGN(a)            ((a)>0 ? 1 : ((a)<0 ? -1 : 0 ))
 #define F_RNG(a,min,max)    ((a)<(min) ? min : ((a)>(max) ? max : a ))
  
+
 #ifdef _MSC_VER
+#if _MSC_VER < 1800		//Visual C++ 2013 1800
 namespace
 {
 	double asinh( const double &value ) {
@@ -97,6 +99,7 @@ namespace
 		return(neg ? -value : value);
 	}
 }
+#endif
 #endif
 
 #define PARAMETER_TO_NUMBER(v,n) CNumber v = c->getArgument(n)->toNumber()
